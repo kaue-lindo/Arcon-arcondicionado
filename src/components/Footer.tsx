@@ -1,7 +1,7 @@
 
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { AirVent, Phone, Mail, MapPin } from 'lucide-react';
+import { Snowflake, Phone, Mail, MapPin } from 'lucide-react';
 
 const Footer = () => {
   return (
@@ -10,8 +10,11 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           <div className="space-y-4">
             <div className="flex items-center space-x-2">
-              <AirVent className="h-8 w-8 text-coolblue-400" />
-              <span className="font-bold text-xl">Frio Perfeito</span>
+              <Snowflake className="h-8 w-8 text-arcon-blue" />
+              <div className="flex flex-col">
+                <span className="font-bold text-xl">ARCON</span>
+                <span className="text-sm">Ar Condicionado</span>
+              </div>
             </div>
             <p className="text-gray-300">
               Soluções completas em instalação e manutenção de ar condicionado com qualidade, eficiência e preço justo.
@@ -58,7 +61,7 @@ const Footer = () => {
         </div>
 
         <div className="border-t border-gray-800 mt-10 pt-6 text-center text-gray-400 text-sm">
-          <p>© {new Date().getFullYear()} Frio Perfeito. Todos os direitos reservados.</p>
+          <p>© {new Date().getFullYear()} ARCON. Todos os direitos reservados.</p>
         </div>
       </div>
     </footer>
