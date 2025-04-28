@@ -1,4 +1,3 @@
-
 import React from 'react';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
@@ -39,7 +38,7 @@ const SobrePage = () => {
       <div className="bg-coolblue-50 py-12 md:py-20">
         <div className="container-custom">
           <div className="max-w-3xl mx-auto text-center">
-            <h1 className="text-4xl md:text-5xl font-bold mb-6">Sobre a Frio Perfeito</h1>
+            <h1 className="text-4xl md:text-5xl font-bold mb-6">Sobre a ARCON Ar Condicionado</h1>
             <p className="text-lg text-gray-700">
               Conheça nossa história, missão, valores e porque somos referência em serviços de ar condicionado.
             </p>
@@ -65,7 +64,7 @@ const SobrePage = () => {
               </div>
               <h2 className="text-3xl md:text-4xl font-bold">Tradição e Inovação em Climatização</h2>
               <p className="text-gray-600">
-                A Frio Perfeito nasceu em 2010 com o objetivo de oferecer serviços de qualidade em instalação e manutenção de ar condicionado. O que começou como uma pequena empresa familiar se transformou em uma referência no mercado de climatização.
+                A ARCON Ar Condicionado nasceu em 2010 com o objetivo de oferecer serviços de qualidade em instalação e manutenção de ar condicionado. O que começou como uma pequena empresa familiar se transformou em uma referência no mercado de climatização.
               </p>
               <p className="text-gray-600">
                 Ao longo dos anos, investimos constantemente em treinamento da nossa equipe, equipamentos modernos e processos eficientes, sempre mantendo como prioridade a satisfação total dos nossos clientes e a qualidade dos serviços prestados.
@@ -186,7 +185,7 @@ const SobrePage = () => {
       <section className="section-padding">
         <div className="container-custom">
           <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">Por Que Escolher a Frio Perfeito?</h2>
+            <h2 className="text-3xl md:text-4xl font-bold mb-4">Por Que Escolher a ARCON Ar Condicionado?</h2>
             <p className="text-lg text-gray-600 max-w-3xl mx-auto">
               Temos orgulho de oferecer serviços que se destacam pela qualidade, confiabilidade e excelência técnica.
             </p>

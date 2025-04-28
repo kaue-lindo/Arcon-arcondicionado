@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { Snowflake, Phone, Mail, MapPin } from 'lucide-react';
@@ -49,7 +50,9 @@ const Footer = () => {
               </li>
               <li className="flex items-start space-x-3">
                 <Mail className="h-5 w-5 text-coolblue-400 mt-0.5" />
-                <span>arcon-arcondicionado@hotmail.com</span>
+                <a href="mailto:arcon-arcondicionado@hotmail.com" className="hover:text-coolblue-300">
+                  arcon-arcondicionado@hotmail.com
+                </a>
               </li>
               <li className="flex items-start space-x-3">
                 <MapPin className="h-5 w-5 text-coolblue-400 mt-0.5" />
