@@ -3,8 +3,30 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
 import { CheckCircle } from 'lucide-react';
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselNext,
+  CarouselPrevious,
+} from "@/components/ui/carousel";
 
 const HomeHero = () => {
+  const images = [
+    {
+      src: "https://images.unsplash.com/photo-1642091470771-c8180711a56c?ixlib=rb-4.0.3&auto=format&fit=crop&w=668&h=668&q=80",
+      alt: "Instalação de ar condicionado"
+    },
+    {
+      src: "https://images.unsplash.com/photo-1473091534298-04dcbce3278c?ixlib=rb-4.0.3&auto=format&fit=crop&w=668&h=668&q=80",
+      alt: "Manutenção de equipamento"
+    },
+    {
+      src: "https://images.unsplash.com/photo-1531297484001-80022131f5a1?ixlib=rb-4.0.3&auto=format&fit=crop&w=668&h=668&q=80",
+      alt: "Planejamento e projeto"
+    }
+  ];
+
   return (
     <div className="hero-gradient">
       <div className="container-custom py-16 md:py-24">
@@ -42,11 +64,21 @@ const HomeHero = () => {
           </div>
           
           <div className="flex justify-center animate-fade-in">
-            <img 
-              src="https://images.unsplash.com/photo-1642091470771-c8180711a56c?ixlib=rb-4.0.3&auto=format&fit=crop&w=668&h=668&q=80" 
-              alt="Técnico instalando ar condicionado" 
-              className="rounded-lg shadow-xl max-w-full h-auto"
-            />
+            <Carousel className="w-full max-w-lg">
+              <CarouselContent>
+                {images.map((image, index) => (
+                  <CarouselItem key={index}>
+                    <img 
+                      src={image.src} 
+                      alt={image.alt} 
+                      className="rounded-lg shadow-xl w-full h-[400px] object-cover"
+                    />
+                  </CarouselItem>
+                ))}
+              </CarouselContent>
+              <CarouselPrevious />
+              <CarouselNext />
+            </Carousel>
           </div>
         </div>
       </div>

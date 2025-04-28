@@ -1,4 +1,3 @@
-
 import React from 'react';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
@@ -43,8 +42,6 @@ const Index = () => {
   return (
     <>
       <Navbar />
-
-      {/* Hero Section */}
       <HomeHero />
 
       {/* Services Section */}
@@ -89,7 +86,7 @@ const Index = () => {
             </div>
             
             <div className="space-y-6">
-              <h2 className="text-3xl md:text-4xl font-bold">Sobre a Frio Perfeito</h2>
+              <h2 className="text-3xl md:text-4xl font-bold">Sobre a ARCON Ar Condicionado</h2>
               <p className="text-gray-600">
                 Somos uma empresa especializada em soluções completas para ar condicionado. Com mais de 10 anos de mercado, oferecemos serviços de instalação, manutenção e higienização de equipamentos de ar condicionado para clientes residenciais e comerciais.
               </p>
