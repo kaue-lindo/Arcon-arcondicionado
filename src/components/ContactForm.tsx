@@ -1,10 +1,8 @@
-
 import React, { useState } from 'react';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
-import { toast } from '@/components/ui/sonner';
-import { useToast } from '@/hooks/use-toast';
+import { toast } from 'sonner';
 
 const ContactForm = () => {
   const [formData, setFormData] = useState({
@@ -28,7 +26,7 @@ const ContactForm = () => {
     
     // Simulate form submission
     setTimeout(() => {
-      toast.success('Mensagem enviada com sucesso! Em breve entraremos em contato.');
+      toast.success('Mensagem enviada com sucesso! Em breve nossa equipe entrará em contato.');
       setFormData({
         name: '',
         email: '',
@@ -118,7 +116,7 @@ const ContactForm = () => {
           value={formData.message}
           onChange={handleChange}
           required
-          placeholder="Descreva o serviço que você precisa..."
+          placeholder="Olá! Vi o site da ARCON Ar Condicionado e gostaria de solicitar um orçamento."
           className="min-h-[120px]"
         />
       </div>

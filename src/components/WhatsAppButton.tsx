@@ -3,8 +3,8 @@ import React from 'react';
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from '@/components/ui/tooltip';
 
 const WhatsAppButton = () => {
-  const phoneNumber = '5511999999999'; // Replace with your actual WhatsApp number
-  const message = encodeURIComponent('Olá! Gostaria de saber mais sobre os serviços de ar condicionado.');
+  const phoneNumber = '5511981509063';
+  const message = encodeURIComponent('Olá! Vi o site da ARCON Ar Condicionado e gostaria de solicitar um orçamento.');
   const whatsappUrl = `https://wa.me/${phoneNumber}?text=${message}`;
 
   return (

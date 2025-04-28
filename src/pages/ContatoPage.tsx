@@ -1,4 +1,3 @@
-
 import React from 'react';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
@@ -32,8 +31,7 @@ const ContatoPage = () => {
                 <Phone className="h-8 w-8 text-coolblue-600" />
               </div>
               <h3 className="text-xl font-semibold mb-3">Telefone</h3>
-              <p className="text-gray-600 mb-2">(11) 99999-9999</p>
-              <p className="text-gray-600">(11) 1234-5678</p>
+              <p className="text-gray-600 mb-2">(11) 98150-9063</p>
             </div>
             
             <div className="bg-white p-6 rounded-lg shadow-md text-center">
@@ -41,8 +39,7 @@ const ContatoPage = () => {
                 <Mail className="h-8 w-8 text-coolblue-600" />
               </div>
               <h3 className="text-xl font-semibold mb-3">Email</h3>
-              <p className="text-gray-600 mb-2">contato@frioperfeito.com.br</p>
-              <p className="text-gray-600">suporte@frioperfeito.com.br</p>
+              <p className="text-gray-600 mb-2">arcon-arcondicionado@hotmail.com</p>
             </div>
             
             <div className="bg-white p-6 rounded-lg shadow-md text-center">
