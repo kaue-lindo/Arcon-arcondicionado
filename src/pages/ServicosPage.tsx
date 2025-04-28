@@ -1,4 +1,3 @@
-
 import React from 'react';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
@@ -6,8 +5,8 @@ import WhatsAppButton from '@/components/WhatsAppButton';
 import { Link } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
 import { 
-  AirVent, Tool, RefreshCw, Thermometer, 
-  Fan, ActivitySquare, CheckCircle, WrenchIcon 
+  AirVent, WrenchIcon, RefreshCw, Thermometer, 
+  Fan, ActivitySquare, CheckCircle
 } from 'lucide-react';
 
 const ServicosPage = () => {
@@ -24,7 +23,7 @@ const ServicosPage = () => {
       ]
     },
     {
-      icon: Tool,
+      icon: WrenchIcon,
       title: 'Manutenção Corretiva',
       description: 'Serviço especializado de diagnóstico e reparo de falhas em equipamentos de ar condicionado com atendimento rápido e eficiente.',
       features: [

@@ -7,7 +7,7 @@ import HomeHero from '@/components/HomeHero';
 import ServiceCard from '@/components/ServiceCard';
 import { Link } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
-import { AirVent, Tool, Thermometer, RefreshCw, Users, Phone, ThumbsUp, WrenchIcon } from 'lucide-react';
+import { AirVent, WrenchIcon, Thermometer, RefreshCw, Users, Phone, ThumbsUp } from 'lucide-react';
 
 const Index = () => {
   const services = [
@@ -17,7 +17,7 @@ const Index = () => {
       description: 'Instalação profissional de aparelhos de ar condicionado split e janela para residências e empresas.'
     },
     {
-      icon: Tool,
+      icon: WrenchIcon,
       title: 'Manutenção Corretiva',
       description: 'Resolução rápida de problemas e defeitos em seu sistema de refrigeração.'
     },
