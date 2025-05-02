@@ -79,8 +79,8 @@ const Index = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
             <div>
               <img 
-                src="https://images.unsplash.com/photo-1581092918056-0c4c3acd3789?ixlib=rb-4.0.3&auto=format&fit=crop&w=668&h=668&q=80" 
-                alt="Técnicos de ar condicionado" 
+                src="/uploads/image4.jpeg" 
+                alt="Conforto com ar condicionado" 
                 className="rounded-lg shadow-lg"
               />
             </div>

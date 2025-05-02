@@ -14,16 +14,20 @@ import {
 const HomeHero = () => {
   const images = [
     {
-      src: "https://images.unsplash.com/photo-1642091470771-c8180711a56c?ixlib=rb-4.0.3&auto=format&fit=crop&w=668&h=668&q=80",
+      src: "/uploads/image1.jpeg", 
       alt: "Instalação de ar condicionado"
     },
     {
-      src: "https://images.unsplash.com/photo-1473091534298-04dcbce3278c?ixlib=rb-4.0.3&auto=format&fit=crop&w=668&h=668&q=80",
+      src: "/uploads/image2.jpeg",
       alt: "Manutenção de equipamento"
     },
     {
-      src: "https://images.unsplash.com/photo-1531297484001-80022131f5a1?ixlib=rb-4.0.3&auto=format&fit=crop&w=668&h=668&q=80",
+      src: "/uploads/image3.jpeg",
       alt: "Planejamento e projeto"
+    },
+    {
+      src: "/uploads/image4.jpeg",
+      alt: "Conforto térmico em ambientes"
     }
   ];
 

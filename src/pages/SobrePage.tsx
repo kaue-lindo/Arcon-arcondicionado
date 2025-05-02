@@ -1,3 +1,4 @@
+
 import React from 'react';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
@@ -5,6 +6,13 @@ import WhatsAppButton from '@/components/WhatsAppButton';
 import { Link } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
 import { CheckCircle, Award, Users, Clock, Briefcase, ThumbsUp, Target } from 'lucide-react';
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselNext,
+  CarouselPrevious,
+} from "@/components/ui/carousel";
 
 const SobrePage = () => {
   const values = [
@@ -30,6 +38,15 @@ const SobrePage = () => {
     }
   ];
 
+  const brands = [
+    { name: "Daikin", logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/8/89/Daikin_logo.svg/2560px-Daikin_logo.svg.png" },
+    { name: "Carrier", logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b9/Carrier_Corporation_logo.svg/2560px-Carrier_Corporation_logo.svg.png" },
+    { name: "Samsung", logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/2/24/Samsung_Logo.svg/2560px-Samsung_Logo.svg.png" },
+    { name: "LG", logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/2/20/LG_symbol.svg/2048px-LG_symbol.svg.png" },
+    { name: "Midea", logo: "https://upload.wikimedia.org/wikipedia/en/thumb/4/45/Midea_logo.svg/1200px-Midea_logo.svg.png" },
+    { name: "Electrolux", logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/0/02/Electrolux-Logo.svg/2560px-Electrolux-Logo.svg.png" },
+  ];
+
   return (
     <>
       <Navbar />
@@ -52,8 +69,8 @@ const SobrePage = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
             <div>
               <img 
-                src="https://images.unsplash.com/photo-1577962917302-cd874c4e31d2?ixlib=rb-4.0.3&auto=format&fit=crop&w=668&h=668&q=80" 
-                alt="Nossa equipe" 
+                src="/uploads/image4.jpeg" 
+                alt="Nossa solução de conforto térmico" 
                 className="rounded-lg shadow-lg"
               />
             </div>
@@ -128,55 +145,37 @@ const SobrePage = () => {
         </div>
       </section>
       
-      {/* Team */}
+      {/* Brands We Support */}
       <section className="section-padding bg-gray-50">
         <div className="container-custom">
           <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">Nossa Equipe</h2>
+            <h2 className="text-3xl md:text-4xl font-bold mb-4">Marcas que Atendemos</h2>
             <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-              Contamos com profissionais altamente qualificados e comprometidos com a excelência e satisfação do cliente.
+              Trabalhamos com as principais marcas do mercado, garantindo qualidade e eficiência em nossos serviços.
             </p>
           </div>
           
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div className="text-center">
-              <img 
-                src="https://images.unsplash.com/photo-1560250097-0b93528c311a?ixlib=rb-4.0.3&auto=format&fit=crop&w=200&h=200&q=80" 
-                alt="Diretor Técnico" 
-                className="rounded-full w-48 h-48 object-cover mx-auto mb-4"
-              />
-              <h3 className="text-xl font-semibold">Carlos Silva</h3>
-              <p className="text-coolblue-600">Diretor Técnico</p>
-              <p className="text-gray-600 mt-2">
-                Especialista em sistemas de climatização com mais de 15 anos de experiência no setor.
-              </p>
-            </div>
-            
-            <div className="text-center">
-              <img 
-                src="https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?ixlib=rb-4.0.3&auto=format&fit=crop&w=200&h=200&q=80" 
-                alt="Gerente de Operações" 
-                className="rounded-full w-48 h-48 object-cover mx-auto mb-4"
-              />
-              <h3 className="text-xl font-semibold">Ana Oliveira</h3>
-              <p className="text-coolblue-600">Gerente de Operações</p>
-              <p className="text-gray-600 mt-2">
-                Responsável pela organização e eficiência de todas as operações da empresa.
-              </p>
-            </div>
-            
-            <div className="text-center">
-              <img 
-                src="https://images.unsplash.com/photo-1568602471122-7832951cc4c5?ixlib=rb-4.0.3&auto=format&fit=crop&w=200&h=200&q=80" 
-                alt="Coordenador de Equipe" 
-                className="rounded-full w-48 h-48 object-cover mx-auto mb-4"
-              />
-              <h3 className="text-xl font-semibold">Marcos Santos</h3>
-              <p className="text-coolblue-600">Coordenador de Equipe</p>
-              <p className="text-gray-600 mt-2">
-                Coordena as equipes técnicas garantindo a qualidade na execução dos serviços.
-              </p>
-            </div>
+          <div className="max-w-4xl mx-auto">
+            <Carousel className="w-full">
+              <CarouselContent>
+                {brands.map((brand, index) => (
+                  <CarouselItem key={index} className="md:basis-1/3 lg:basis-1/4">
+                    <div className="p-4">
+                      <div className="bg-white rounded-lg shadow-md p-6 h-32 flex items-center justify-center">
+                        <img 
+                          src={brand.logo} 
+                          alt={`Logo ${brand.name}`} 
+                          className="max-h-20 max-w-full"
+                        />
+                      </div>
+                      <p className="text-center mt-3 font-medium text-gray-700">{brand.name}</p>
+                    </div>
+                  </CarouselItem>
+                ))}
+              </CarouselContent>
+              <CarouselPrevious className="left-0" />
+              <CarouselNext className="right-0" />
+            </Carousel>
           </div>
         </div>
       </section>
