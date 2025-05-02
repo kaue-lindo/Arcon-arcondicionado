@@ -21,7 +21,8 @@ const ServicosPage = () => {
         'Adequação de infraestrutura elétrica',
         'Instalação de drenos e tubulações',
         'Testes de funcionamento e calibração'
-      ]
+      ],
+      image: "/lovable-uploads/b4444fab-fbc9-4afc-b85e-56c06c1a9f2e.png"
     },
     {
       icon: WrenchIcon,
@@ -32,7 +33,8 @@ const ServicosPage = () => {
         'Diagnóstico eletrônico de falhas',
         'Substituição de componentes danificados',
         'Correção de problemas elétricos'
-      ]
+      ],
+      image: "/lovable-uploads/6b5a9c5d-560e-4293-ba7f-51dad600ba34.png"
     },
     {
       icon: RefreshCw,
@@ -43,7 +45,8 @@ const ServicosPage = () => {
         'Verificação de carga de gás',
         'Limpeza do sistema de drenagem',
         'Verificação do sistema elétrico'
-      ]
+      ],
+      image: "/lovable-uploads/d39d049a-faf0-4f20-b29d-c4c8b2f7f412.png"
     },
     {
       icon: WrenchIcon,
@@ -54,7 +57,8 @@ const ServicosPage = () => {
         'Limpeza completa de evaporadores',
         'Limpeza de filtros',
         'Eliminação de odores indesejados'
-      ]
+      ],
+      image: "/lovable-uploads/308521c0-a283-4a3c-a4f5-8aede1369ce0.png"
     },
     {
       icon: Fan,
@@ -112,6 +116,16 @@ const ServicosPage = () => {
                   <div>
                     <h3 className="text-2xl font-semibold mb-3">{service.title}</h3>
                     <p className="text-gray-600 mb-4">{service.description}</p>
+                    
+                    {service.image && (
+                      <div className="mb-4">
+                        <img 
+                          src={service.image}
+                          alt={service.title}
+                          className="w-full h-48 object-cover rounded-lg"
+                        />
+                      </div>
+                    )}
                     
                     <h4 className="font-medium text-gray-800 mb-2">Inclui:</h4>
                     <ul className="space-y-2">

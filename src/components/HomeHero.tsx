@@ -14,20 +14,20 @@ import {
 const HomeHero = () => {
   const images = [
     {
-      src: "/uploads/image1.jpeg", 
+      src: "/lovable-uploads/308521c0-a283-4a3c-a4f5-8aede1369ce0.png", 
+      alt: "Controle de ar condicionado"
+    },
+    {
+      src: "/lovable-uploads/b4444fab-fbc9-4afc-b85e-56c06c1a9f2e.png",
       alt: "Instalação de ar condicionado"
     },
     {
-      src: "/uploads/image2.jpeg",
+      src: "/lovable-uploads/d39d049a-faf0-4f20-b29d-c4c8b2f7f412.png",
       alt: "Manutenção de equipamento"
     },
     {
-      src: "/uploads/image3.jpeg",
-      alt: "Planejamento e projeto"
-    },
-    {
-      src: "/uploads/image4.jpeg",
-      alt: "Conforto térmico em ambientes"
+      src: "/lovable-uploads/6b5a9c5d-560e-4293-ba7f-51dad600ba34.png",
+      alt: "Limpeza de ar condicionado"
     }
   ];
 

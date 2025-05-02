@@ -39,12 +39,12 @@ const SobrePage = () => {
   ];
 
   const brands = [
-    { name: "Daikin", logo: "/uploads/logos/daikin.png" },
-    { name: "Carrier", logo: "/uploads/logos/carrier.png" },
-    { name: "Samsung", logo: "/uploads/logos/samsung.png" },
-    { name: "LG", logo: "/uploads/logos/lg.png" },
-    { name: "Midea", logo: "/uploads/logos/midea.png" },
-    { name: "Electrolux", logo: "/uploads/logos/electrolux.png" },
+    { name: "Daikin", logo: "/uploads/logos/daikin.svg" },
+    { name: "Carrier", logo: "/uploads/logos/carrier.svg" },
+    { name: "Samsung", logo: "/uploads/logos/samsung.svg" },
+    { name: "LG", logo: "/uploads/logos/lg.svg" },
+    { name: "Midea", logo: "/uploads/logos/midea.svg" },
+    { name: "Electrolux", logo: "/uploads/logos/electrolux.svg" },
   ];
 
   return (
@@ -69,7 +69,7 @@ const SobrePage = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
             <div>
               <img 
-                src="/uploads/image4.jpeg" 
+                src="/lovable-uploads/308521c0-a283-4a3c-a4f5-8aede1369ce0.png" 
                 alt="Nossa solução de conforto térmico" 
                 className="rounded-lg shadow-lg w-full h-auto"
               />
@@ -134,11 +134,13 @@ const SobrePage = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {values.map((value, index) => (
               <div key={index} className="bg-white p-6 rounded-lg shadow-md border border-gray-100">
-                <div className="bg-coolblue-50 p-4 rounded-full w-16 h-16 flex items-center justify-center mb-5">
-                  <value.icon className="h-8 w-8 text-coolblue-600" />
+                <div className="flex justify-center mb-5">
+                  <div className="bg-coolblue-50 p-4 rounded-full w-16 h-16 flex items-center justify-center">
+                    <value.icon className="h-8 w-8 text-coolblue-600" />
+                  </div>
                 </div>
-                <h3 className="text-xl font-semibold mb-3">{value.title}</h3>
-                <p className="text-gray-600">{value.description}</p>
+                <h3 className="text-xl font-semibold mb-3 text-center">{value.title}</h3>
+                <p className="text-gray-600 text-center">{value.description}</p>
               </div>
             ))}
           </div>
@@ -156,35 +158,15 @@ const SobrePage = () => {
           </div>
           
           <div className="max-w-4xl mx-auto">
-            <Carousel className="w-full">
-              <CarouselContent>
-                {brands.map((brand, index) => (
-                  <CarouselItem key={index} className="md:basis-1/3 lg:basis-1/4">
-                    <div className="p-4">
-                      <div className="bg-white rounded-lg shadow-md p-6 h-32 flex items-center justify-center">
-                        <div className="h-20 w-full flex items-center justify-center">
-                          <img 
-                            src={brand.logo} 
-                            alt={`Logo ${brand.name}`} 
-                            className="max-h-16 max-w-[80%] object-contain"
-                            onError={(e) => {
-                              // Fallback if image fails to load
-                              const target = e.target as HTMLImageElement;
-                              target.onerror = null;
-                              target.src = "/placeholder.svg";
-                              target.alt = `${brand.name} (Imagem não disponível)`;
-                            }}
-                          />
-                        </div>
-                      </div>
-                      <p className="text-center mt-3 font-medium text-gray-700">{brand.name}</p>
-                    </div>
-                  </CarouselItem>
-                ))}
-              </CarouselContent>
-              <CarouselPrevious className="-left-12" />
-              <CarouselNext className="-right-12" />
-            </Carousel>
+            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6">
+              {brands.map((brand, index) => (
+                <div key={index} className="p-2">
+                  <div className="bg-white rounded-lg shadow-md p-4 h-24 flex items-center justify-center">
+                    <p className="font-medium text-gray-700 text-center">{brand.name}</p>
+                  </div>
+                </div>
+              ))}
+            </div>
           </div>
         </div>
       </section>
