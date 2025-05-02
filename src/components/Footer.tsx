@@ -45,19 +45,19 @@ const Footer = () => {
             <h3 className="text-lg font-semibold mb-4 border-b border-gray-700 pb-2">Contato</h3>
             <ul className="space-y-3">
               <li className="flex items-start space-x-3">
-                <Phone className="h-5 w-5 text-coolblue-400 mt-0.5" />
+                <Phone className="h-5 w-5 text-coolblue-400 mt-0.5 shrink-0" />
                 <Link to="/contato" className="hover:text-coolblue-300">
                   (11) 98150-9063
                 </Link>
               </li>
               <li className="flex items-start space-x-3">
-                <Mail className="h-5 w-5 text-coolblue-400 mt-0.5" />
-                <Link to="/contato" className="hover:text-coolblue-300">
+                <Mail className="h-5 w-5 text-coolblue-400 mt-0.5 shrink-0" />
+                <Link to="/contato" className="hover:text-coolblue-300 break-all">
                   arcon-arcondicionado@hotmail.com
                 </Link>
               </li>
               <li className="flex items-start space-x-3">
-                <MapPin className="h-5 w-5 text-coolblue-400 mt-0.5" />
+                <MapPin className="h-5 w-5 text-coolblue-400 mt-0.5 shrink-0" />
                 <span>São Paulo - SP</span>
               </li>
             </ul>

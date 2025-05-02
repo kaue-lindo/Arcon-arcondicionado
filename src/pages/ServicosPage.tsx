@@ -1,3 +1,4 @@
+
 import React from 'react';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
@@ -105,7 +106,7 @@ const ServicosPage = () => {
             {services.map((service, index) => (
               <div key={index} className="bg-white p-8 rounded-lg shadow-md border border-gray-100">
                 <div className="flex items-start">
-                  <div className="bg-coolblue-50 p-4 rounded-full mr-6">
+                  <div className="bg-coolblue-50 p-4 rounded-full mr-6 flex items-center justify-center w-16 h-16">
                     <service.icon className="h-8 w-8 text-coolblue-600" />
                   </div>
                   <div>
@@ -185,12 +186,12 @@ const ServicosPage = () => {
               <Button variant="secondary" asChild size="lg">
                 <Link to="/contato">Solicitar Orçamento</Link>
               </Button>
-              <Button variant="outline" className="text-white border-white hover:bg-white/10" asChild size="lg">
-                <a href="https://wa.me/5511999999999" target="_blank" rel="noopener noreferrer">
+              <Button variant="outline" className="text-white border-white hover:bg-white/20" asChild size="lg">
+                <a href="https://wa.me/5511981509063" target="_blank" rel="noopener noreferrer" className="flex items-center justify-center">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
-                    width="24"
-                    height="24"
+                    width="20"
+                    height="20"
                     viewBox="0 0 24 24"
                     fill="currentColor"
                     className="w-5 h-5 mr-2"

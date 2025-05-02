@@ -39,12 +39,12 @@ const SobrePage = () => {
   ];
 
   const brands = [
-    { name: "Daikin", logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/8/89/Daikin_logo.svg/2560px-Daikin_logo.svg.png" },
-    { name: "Carrier", logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b9/Carrier_Corporation_logo.svg/2560px-Carrier_Corporation_logo.svg.png" },
-    { name: "Samsung", logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/2/24/Samsung_Logo.svg/2560px-Samsung_Logo.svg.png" },
-    { name: "LG", logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/2/20/LG_symbol.svg/2048px-LG_symbol.svg.png" },
-    { name: "Midea", logo: "https://upload.wikimedia.org/wikipedia/en/thumb/4/45/Midea_logo.svg/1200px-Midea_logo.svg.png" },
-    { name: "Electrolux", logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/0/02/Electrolux-Logo.svg/2560px-Electrolux-Logo.svg.png" },
+    { name: "Daikin", logo: "/uploads/logos/daikin.png" },
+    { name: "Carrier", logo: "/uploads/logos/carrier.png" },
+    { name: "Samsung", logo: "/uploads/logos/samsung.png" },
+    { name: "LG", logo: "/uploads/logos/lg.png" },
+    { name: "Midea", logo: "/uploads/logos/midea.png" },
+    { name: "Electrolux", logo: "/uploads/logos/electrolux.png" },
   ];
 
   return (
@@ -71,7 +71,7 @@ const SobrePage = () => {
               <img 
                 src="/uploads/image4.jpeg" 
                 alt="Nossa solução de conforto térmico" 
-                className="rounded-lg shadow-lg"
+                className="rounded-lg shadow-lg w-full h-auto"
               />
             </div>
             
@@ -162,19 +162,28 @@ const SobrePage = () => {
                   <CarouselItem key={index} className="md:basis-1/3 lg:basis-1/4">
                     <div className="p-4">
                       <div className="bg-white rounded-lg shadow-md p-6 h-32 flex items-center justify-center">
-                        <img 
-                          src={brand.logo} 
-                          alt={`Logo ${brand.name}`} 
-                          className="max-h-20 max-w-full"
-                        />
+                        <div className="h-20 w-full flex items-center justify-center">
+                          <img 
+                            src={brand.logo} 
+                            alt={`Logo ${brand.name}`} 
+                            className="max-h-16 max-w-[80%] object-contain"
+                            onError={(e) => {
+                              // Fallback if image fails to load
+                              const target = e.target as HTMLImageElement;
+                              target.onerror = null;
+                              target.src = "/placeholder.svg";
+                              target.alt = `${brand.name} (Imagem não disponível)`;
+                            }}
+                          />
+                        </div>
                       </div>
                       <p className="text-center mt-3 font-medium text-gray-700">{brand.name}</p>
                     </div>
                   </CarouselItem>
                 ))}
               </CarouselContent>
-              <CarouselPrevious className="left-0" />
-              <CarouselNext className="right-0" />
+              <CarouselPrevious className="-left-12" />
+              <CarouselNext className="-right-12" />
             </Carousel>
           </div>
         </div>
@@ -192,25 +201,31 @@ const SobrePage = () => {
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             <div className="bg-white p-6 rounded-lg shadow-md border border-gray-100">
-              <Clock className="h-8 w-8 text-coolblue-600 mb-4" />
-              <h3 className="text-xl font-semibold mb-3">Atendimento Rápido</h3>
-              <p className="text-gray-600">
+              <div className="flex justify-center mb-4">
+                <Clock className="h-8 w-8 text-coolblue-600" />
+              </div>
+              <h3 className="text-xl font-semibold mb-3 text-center">Atendimento Rápido</h3>
+              <p className="text-gray-600 text-center">
                 Respondemos rapidamente às suas solicitações, com agendamentos flexíveis e cumprimento rigoroso dos prazos estabelecidos.
               </p>
             </div>
             
             <div className="bg-white p-6 rounded-lg shadow-md border border-gray-100">
-              <Award className="h-8 w-8 text-coolblue-600 mb-4" />
-              <h3 className="text-xl font-semibold mb-3">Garantia de Serviço</h3>
-              <p className="text-gray-600">
+              <div className="flex justify-center mb-4">
+                <Award className="h-8 w-8 text-coolblue-600" />
+              </div>
+              <h3 className="text-xl font-semibold mb-3 text-center">Garantia de Serviço</h3>
+              <p className="text-gray-600 text-center">
                 Todos os nossos serviços possuem garantia, demonstrando nossa confiança na qualidade do trabalho que realizamos.
               </p>
             </div>
             
             <div className="bg-white p-6 rounded-lg shadow-md border border-gray-100">
-              <Users className="h-8 w-8 text-coolblue-600 mb-4" />
-              <h3 className="text-xl font-semibold mb-3">Equipe Qualificada</h3>
-              <p className="text-gray-600">
+              <div className="flex justify-center mb-4">
+                <Users className="h-8 w-8 text-coolblue-600" />
+              </div>
+              <h3 className="text-xl font-semibold mb-3 text-center">Equipe Qualificada</h3>
+              <p className="text-gray-600 text-center">
                 Nossos técnicos passam por treinamentos constantes para se manterem atualizados com as melhores práticas e tecnologias.
               </p>
             </div>

@@ -51,7 +51,7 @@ const HomeHero = () => {
                 'Melhores preços do mercado'
               ].map((item, index) => (
                 <li key={index} className="flex items-center space-x-2">
-                  <CheckCircle className="text-coolblue-600 h-5 w-5" />
+                  <CheckCircle className="text-coolblue-600 h-5 w-5 shrink-0" />
                   <span>{item}</span>
                 </li>
               ))}
@@ -72,16 +72,25 @@ const HomeHero = () => {
               <CarouselContent>
                 {images.map((image, index) => (
                   <CarouselItem key={index}>
-                    <img 
-                      src={image.src} 
-                      alt={image.alt} 
-                      className="rounded-lg shadow-xl w-full h-[400px] object-cover"
-                    />
+                    <div className="w-full h-[400px] overflow-hidden rounded-lg shadow-xl">
+                      <img 
+                        src={image.src} 
+                        alt={image.alt} 
+                        className="w-full h-full object-cover"
+                        onError={(e) => {
+                          // Fallback if image fails to load
+                          const target = e.target as HTMLImageElement;
+                          target.onerror = null;
+                          target.src = "/placeholder.svg";
+                          target.alt = "Imagem não disponível";
+                        }}
+                      />
+                    </div>
                   </CarouselItem>
                 ))}
               </CarouselContent>
-              <CarouselPrevious />
-              <CarouselNext />
+              <CarouselPrevious className="-left-12" />
+              <CarouselNext className="-right-12" />
             </Carousel>
           </div>
         </div>
